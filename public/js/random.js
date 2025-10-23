@@ -10,9 +10,11 @@ function makeSecret(len = DIGITS) {
 
     while (arr.length < len) {
         const digit = String(randInt(0, MAX_DIGIT));
-        arr.push(digit);
+        if (!arr.includes(digit)) {
+            arr.push(digit);
+        }
     }
 
     return arr.join("");
 
-} 
+}
