@@ -1,5 +1,6 @@
 const DIGITS = 4;
 const MAX_DIGIT = 9;
+let Secret = "";
 
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -18,3 +19,5 @@ function makeSecret(len = DIGITS) {
     return arr.join("");
 
 }
+
+Secret = makeSecret();
