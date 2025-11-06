@@ -5,3 +5,4 @@ document.getElementById("btn_reset").addEventListener("click", () => {
 
     result.innerHTML = "New code generated - start guessing!";
 });
+

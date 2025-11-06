@@ -1,27 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulls and cows</title>
+    <title>Bulls and Cows</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <header>
+        <h1>Bulls and Cows</h1>
+        <p class="subtitle">
+            Guess the 4-digit number!<br>
+            Right digit in right place = Bull<br>
+            Right digit in wrong place = Cow
+        </p>
+    </header>
 
-<h1>Bulls and cows</h1>
-<p>Guess a four digit number, right digit in right spot is a bull, right digit in wrong spot is a cow. Your goal is to get four bulls. You have 10 tries in total to win.</p>
+    <div class="game">
+        <div class="input-area">
+            <input type="text" id="guess" maxlength="4" placeholder="••••" autocomplete="off">
+            <button id="btn_guess">Guess</button>
+        </div>
 
-<div id="form" class="form">
-    <input type="text" id="guess" placeholder="Input 4 digits" />
-    <button id="btn_guess">Guess</button>
-    <script src="js/guess.js"></script>
-    <button id="btn_reset">New digits</button>
-    <script src="js/reset.js"></script>
+        <button id="btn_reset" class="btn-secondary">New number</button>
+
+        <div id="attempts">Attempts left: <span id="counter">10</span></div>
+
+        <div id="results" class="results"></div>
+    </div>
+
 </div>
+
 <script src="js/random.js"></script>
-
-<div id="results"></div>
+<script src="js/guess.js"></script>
+<script src="js/reset.js"></script>
 <script src="js/checkdigits.js"></script>
-
 </body>
 </html>
