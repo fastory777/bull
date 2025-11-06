@@ -1,3 +1,5 @@
 document.getElementById("btn_guess").addEventListener("click", function() {
-    alert("Guess button clicked");
+    Guesses++;
+    alert(`Guess button clicked (${Guesses}).`);
+    // alternativ: ("Guess button clicked (" + Guesses + ").");
 });

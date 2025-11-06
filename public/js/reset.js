@@ -1,8 +1,7 @@
 document.getElementById("btn_reset").addEventListener("click", () => {
-    // alert("Reset button trykket");
-    Secret = makeSecret();
+    let secret = makeSecret(DIGITS);
     let result = document.getElementById("results");
+    result.innerHTML = `New code generated (${secret}) - start guessing!`;
+    Guesses = 0;
 
-    result.innerHTML = "New code generated - start guessing!";
 });
-
