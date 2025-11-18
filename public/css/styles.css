@@ -155,8 +155,10 @@ header h1 {
 .result-item.win {
     background: linear-gradient(90deg, #4ade80, #22c55e);
     font-weight: 700;
-    animation: pulse 1s infinite alternate;
+    animation: winPop 0.4s ease-out, pulseGlow 1.2s infinite alternate;
+    transform-origin: center;
 }
+
 
 @keyframes slideUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -172,6 +174,17 @@ footer {
     margin-top: 40px;
     opacity: 0.7;
     font-size: 0.9rem;
+}
+
+@keyframes winPop {
+    0% { transform: scale(0.6) rotate(-3deg); opacity: 0; }
+    50% { transform: scale(1.05) rotate(1deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes pulseGlow {
+    from { box-shadow: 0 0 15px rgba(74, 222, 128, 0.4); }
+    to { box-shadow: 0 0 35px rgba(74, 222, 128, 0.7); }
 }
 
 /* ✅ Мобильный фикс */

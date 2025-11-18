@@ -51,7 +51,7 @@ document.getElementById("btn_guess").addEventListener("click", function () {
 
     if (res.bulls === DIGITS) {
         item.classList.add("win");
-        item.textContent = `${Guesses}. try: ${res.bulls} bulls and ${res.cows} cows. You win! Secret was ${Secret}.`;
+        item.textContent = `🎉 ${Guesses}. ${guess} → ${res.bulls} bulls / ${res.cows} cows. You win! Secret was ${Secret}. 🎉`;
 
         GameOver = true;
         guessInput.disabled = true;
