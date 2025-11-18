@@ -25,6 +25,36 @@ function makeSecret(len = DIGITS) {
 
 }
 
+// Timer
+let timerInterval = null;
+let elapsedSeconds = 0;
+
+function startTimer() {
+    clearInterval(timerInterval);
+    elapsedSeconds = 0;
+    updateTimerDisplay();
+
+    timerInterval = setInterval(() => {
+        elapsedSeconds++;
+        updateTimerDisplay();
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+function updateTimerDisplay() {
+    const el = document.getElementById("time_value");
+    if (!el) return;
+
+    const min = Math.floor(elapsedSeconds / 60).toString().padStart(2, "0");
+    const sec = (elapsedSeconds % 60).toString().padStart(2, "0");
+
+    el.textContent = `${min}:${sec}`;
+}
+
+
 function updateAttemptsLeft() {
     const counterEl = document.getElementById("counter");
     if (!counterEl) return;
@@ -35,3 +65,4 @@ function updateAttemptsLeft() {
 
 Secret = makeSecret();
 updateAttemptsLeft();
+startTimer();

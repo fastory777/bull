@@ -56,6 +56,7 @@ document.getElementById("btn_guess").addEventListener("click", function () {
         GameOver = true;
         guessInput.disabled = true;
         document.getElementById("btn_guess").disabled = true;
+        stopTimer();
     }
 
     else if (Guesses >= MAX_ATTEMPTS) {
@@ -67,6 +68,7 @@ document.getElementById("btn_guess").addEventListener("click", function () {
         GameOver = true;
         guessInput.disabled = true;
         document.getElementById("btn_guess").disabled = true;
+        stopTimer();
     }
 
     guessInput.select();

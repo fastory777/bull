@@ -23,6 +23,7 @@ document.getElementById("btn_reset").addEventListener("click", () => {
     btnGuess.disabled = false;
 
     Secret = makeSecret(DIGITS);
+    startTimer();
 
     updateAttemptsLeft();
 });

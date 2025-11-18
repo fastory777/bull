@@ -111,6 +111,17 @@ header h1 {
     font-weight: 700;
 }
 
+#timer {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+#time_value {
+    color: #ffd93d;
+}
+
+
 #counter {
     color: #ffd93d;
     font-size: 1.5rem;
