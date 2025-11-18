@@ -28,12 +28,12 @@ document.getElementById("btn_guess").addEventListener("click", function () {
 
     if (!/^\d{4}$/.test(guess)) {
         item.textContent = "Not four digits :-(";
-        results.appendChild(item);
+        results.prepend(item);
         guessInput.select();
         return;
     } else if (new Set(guess).size !== 4) {
         item.textContent = "Not four unique digits :-(";
-        results.appendChild(item);
+        results.prepend(item);
         guessInput.select();
         return;
     }
@@ -43,7 +43,7 @@ document.getElementById("btn_guess").addEventListener("click", function () {
 
     let res = countBullsAndCows(guess, Secret);
     item.textContent = `${Guesses}. try: ${res.bulls} bulls and ${res.cows} cows.`;
-    results.appendChild(item);
+    results.prepend(item);
 
 
     updateAttemptsLeft();
@@ -62,7 +62,7 @@ document.getElementById("btn_guess").addEventListener("click", function () {
         const gameOverItem = document.createElement("div");
         gameOverItem.classList.add("result-item");
         gameOverItem.textContent = `No attempts left. Game over! Secret was ${Secret}.`;
-        results.appendChild(gameOverItem);
+        results.prepend(gameOverItem);
 
         GameOver = true;
         guessInput.disabled = true;

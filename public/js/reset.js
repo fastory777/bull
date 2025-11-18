@@ -8,7 +8,7 @@ document.getElementById("btn_reset").addEventListener("click", () => {
     const msg = document.createElement("div");
     msg.classList.add("result-item");
     msg.textContent = "New code generated! Start guessing!";
-    result.appendChild(msg);
+    result.prepend(msg);
 
     Guesses = 0;
     GameOver = false;
